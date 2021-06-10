@@ -1,82 +1,131 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Link from "next/link";
+import Container from "../components/container";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Jongyun's Blog</title>
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+      <Container>
+        <header className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+            <Link href="/">
+              <a className="hover:underline">Jongyun's Blog</a>
+            </Link>
+          </h1>
+        </header>
+        <section className="text-gray-600 body-font overflow-hidden">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="-my-8 divide-y-2 divide-gray-100">
+              <div className="py-8 flex flex-wrap md:flex-nowrap">
+                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span className="font-semibold title-font text-gray-700">
+                    CATEGORY
+                  </span>
+                  <span className="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+                </div>
+                <div className="md:flex-grow">
+                  <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
+                    Bitters hashtag waistcoat fashion axe chia unicorn
+                  </h2>
+                  <p className="leading-relaxed">
+                    Glossier echo park pug, church-key sartorial biodiesel
+                    vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf
+                    moon party messenger bag selfies, poke vaporware kombucha
+                    lumbersexual pork belly polaroid hoodie portland craft beer.
+                  </p>
+                  <a className="text-indigo-500 inline-flex items-center mt-4">
+                    Learn More
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div className="py-8 flex flex-wrap md:flex-nowrap">
+                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span className="font-semibold title-font text-gray-700">
+                    CATEGORY
+                  </span>
+                  <span className="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+                </div>
+                <div className="md:flex-grow">
+                  <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
+                    Meditation bushwick direct trade taxidermy shaman
+                  </h2>
+                  <p className="leading-relaxed">
+                    Glossier echo park pug, church-key sartorial biodiesel
+                    vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf
+                    moon party messenger bag selfies, poke vaporware kombucha
+                    lumbersexual pork belly polaroid hoodie portland craft beer.
+                  </p>
+                  <a className="text-indigo-500 inline-flex items-center mt-4">
+                    Learn More
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div className="py-8 flex flex-wrap md:flex-nowrap">
+                <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span className="font-semibold title-font text-gray-700">
+                    CATEGORY
+                  </span>
+                  <span className="text-sm text-gray-500">12 Jun 2019</span>
+                </div>
+                <div className="md:flex-grow">
+                  <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
+                    Woke master cleanse drinking vinegar salvia
+                  </h2>
+                  <p className="leading-relaxed">
+                    Glossier echo park pug, church-key sartorial biodiesel
+                    vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf
+                    moon party messenger bag selfies, poke vaporware kombucha
+                    lumbersexual pork belly polaroid hoodie portland craft beer.
+                  </p>
+                  <a className="text-indigo-500 inline-flex items-center mt-4">
+                    Learn More
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Container>
+    </Layout>
+  );
 }
